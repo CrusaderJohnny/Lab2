@@ -1,8 +1,6 @@
 import { Button, Pressable, StyleSheet, Text, View, FlatList } from "react-native";
 import { fruits } from "../components/fruityf";
-import { Image } from "expo-image";
 import { Link } from "expo-router";
-import { useHrefAttrs } from "expo-router/build/link/useLinkHooks";
 
 export default function Page() {
   return (

@@ -1,5 +1,4 @@
 import { Button, Pressable, StyleSheet, Text, View } from "react-native";
-import { fruits } from "../components/fruityf";
 import { Image, useImage } from "expo-image";
 import { Link } from 'expo-router';
 
