@@ -1,14 +1,15 @@
 import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 import { fruits } from "../components/fruityf";
-import { Image } from "expo-image";
+import { Image, useImage } from "expo-image";
 import { Link } from 'expo-router';
 
 
-const appleImage = require('./assets/apple.jpg');
+const appleImage = useImage('./assets/apple.jpg');
 
 export default function Page() {
     return (
         <View>
+            <Text>Page 2</Text>
             <Image style={styles.container} source={appleImage} placeholder={'Loading Image'} contentFit="cover"/>
         </View>
     );

@@ -12,9 +12,9 @@ export default function Page() {
         <Text style={styles.subtitle}>This is the first page of your app.</Text>
         <FlatList
           data={[
-            {key: <Link href="/apple.tsx">{fruits[0]}</Link>},
-            {key: <Link href="/orange.tsx">{fruits[1]}</Link>},
-            {key: <Link href="/mango.tsx">{fruits[2]}</Link>}
+            {key: <Link href="/apple">{fruits[0]}</Link>},
+            {key: <Link href="/orange">{fruits[1]}</Link>},
+            {key: <Link href="/mango">{fruits[2]}</Link>}
           ]}
           renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         />
