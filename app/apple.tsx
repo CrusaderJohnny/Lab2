@@ -7,9 +7,9 @@ const appleImage = useImage('./assets/apple.jpg');
 
 export default function Page() {
     return (
-        <View>
+        <View style={styles.container}>
             <Text>Page 2</Text>
-            <Image style={styles.container} source={appleImage} placeholder={'Loading Image'} contentFit="cover"/>
+            <Image source={appleImage} placeholder={'Loading Image'} contentFit="cover"/>
         </View>
     );
 }
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
       image: {
         flex: 1,
         width: '100%',
+        height: '100%',
         backgroundColor: '#0553',
       },
 })

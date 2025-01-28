@@ -8,16 +8,16 @@ export default function Page() {
       <View style={styles.main}>
         <Text style={styles.title}>Hello World</Text>
         <Text style={styles.subtitle}>This is the first page of your app.</Text>
-        <FlatList
+        {/* <FlatList
           data={[
             {key: <Link href="/apple">{fruits[0]}</Link>},
             {key: <Link href="/orange">{fruits[1]}</Link>},
             {key: <Link href="/mango">{fruits[2]}</Link>}
           ]}
           renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-        />
+        /> */}
         <View style={styles.buttonContainer}>
-        <Pressable style={styles.button}><Text style={styles.buttonLabel}>Press Here</Text></Pressable>
+        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}><Text style={styles.buttonLabel}>Press Here</Text></Pressable>
         </View>
       </View>
     </View>
