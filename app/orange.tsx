@@ -3,12 +3,12 @@ import { Image } from "expo-image";
 import { Link } from 'expo-router';
 
 
-const appleImage = require('../assets/apple.jpg');
+const orangeImage = require('../assets/orange.jpg');
 
 export default function Page() {
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={appleImage} placeholder={'Loading Image'}/>
+            <Image style={styles.image} source={orangeImage} placeholder={'Loading Image'}/>
         </View>
     );
 }

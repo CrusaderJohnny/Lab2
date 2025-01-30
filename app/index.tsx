@@ -5,17 +5,17 @@ import { Link } from "expo-router";
 export default function Page() {
   return (
     <View style={styles.container}>
-      <View style={styles.main}>
+      <View>
         <Text style={styles.title}>Hello World</Text>
         <Text style={styles.subtitle}>This is the first page of your app.</Text>
-        {/* <FlatList
+        <FlatList style={styles.list}
           data={[
-            {key: <Link href="/apple">{fruits[0]}</Link>},
-            {key: <Link href="/orange">{fruits[1]}</Link>},
-            {key: <Link href="/mango">{fruits[2]}</Link>}
+            {key: fruits[0], link: "/apple"},
+            {key: fruits[1], link: "/orange"},
+            {key: fruits[2], link: "/mango"}
           ]}
-          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-        /> */}
+          renderItem={({item}) => (<Link href={item.link}><Text style={styles.item}>{item.key}</Text></Link>)}
+        />
         <View style={styles.buttonContainer}>
         <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}><Text style={styles.buttonLabel}>Press Here</Text></Pressable>
         </View>
@@ -30,10 +30,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 24,
   },
+  list: {
+    paddingTop: 200,
+    paddingLeft: 150,
+    flexDirection: 'column',
+  },
   item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
+    fontSize: 28,
   },
   buttonContainer: {
     width: 320,
@@ -55,12 +58,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     backgroundColor: 'red',
-  },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
   },
   title: {
     fontSize: 64,
